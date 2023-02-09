@@ -14,9 +14,13 @@ function Header() {
   return (
     <>
     <header className="header">
-      <h2>Text Logo</h2>
+      <a href="/">
+        <h2>Text Logo</h2>
+      </a>
       <nav className='nav'>
-        <h2>Mints</h2>
+        <a href="/mints">
+          <h2>Mints</h2>
+        </a>
         <div className="icons">
           <img src={discordLogo} alt="discord" />
           <img src={twitterLogo} alt="twitter" />
@@ -26,7 +30,9 @@ function Header() {
     </header>
     {isActive && (
       <div className='burger-content'>
-        <h2>Mints</h2>
+        <a href="/mints">
+          <h2>Mints</h2>
+        </a>
         <div className="icons">
           <img src={discordLogo} alt="discord" />
           <img src={twitterLogo} alt="twitter" />

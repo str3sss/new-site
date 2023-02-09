@@ -1,22 +1,17 @@
-import { useState } from 'react';
+import {Routes, Route} from 'react-router-dom';
+
 import './App.css';
-import FilterPanel from './components/FilterPanel';
-import Header from './components/Header';
-import Table from './components/Table';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import MintsPage from './pages/MintsPage';
 
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <div className="wrapper">
-        <div className="wrapper-header">
-          <h2 className="title">Ordinals Ranking</h2>
-          <FilterPanel />
-        </div>
-        <Table />
-      </div>
-    </div>
+    <Routes>
+      <Route path='/' element={<Layout children={<HomePage />} />}/>
+      <Route path='/mints' element={<Layout children={<MintsPage />} />}/>
+    </Routes>
   );
 }
 
